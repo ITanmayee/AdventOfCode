@@ -65,6 +65,7 @@ def numbersSum(inputTextList):
         for line in range(rows):
                 for ch in range(cols):
                         if isSymbol(inputTextList[line][ch]):
+                                numbers = []
                                 if isValidIndex(line-1, ch-1, rows, cols) and inputTextList[line - 1][ch - 1] in '0123456789':
                                         numbers.append(getNum(inputTextList[line - 1], ch - 1))
                                 if isValidIndex(line-1, ch, rows, cols) and inputTextList[line - 1][ch] in '0123456789':
